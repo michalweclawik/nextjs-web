@@ -1,8 +1,13 @@
 import React from "react";
-import styles fromn "./button.module,css"
+import styles from "./button.module.css";
+import Link from "next/link";
 
-const Button = () => {
-  return <div>Button</div>;
+const Button = ({ text, url }) => {
+  return (
+    <Link href={url}>
+      <button className={styles.container}>{text}</button>
+    </Link>
+  );
 };
 
 export default Button;
